@@ -1,0 +1,37 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+float multiplikation(float zaehler1, float nenner1, float zaehler2, float nenner2)
+{
+    float Ezaehler1 = zaehler1 * zaehler2;
+    float Enenner1 = nenner1 * nenner2;
+
+    printf("(%f/%f)*(%f/%f)=(%f/%f)", zaehler1, nenner1, zaehler2, nenner2, Ezaehler1, Enenner1);
+}
+
+void division(float zaehler1, float zaehler2, float nenner1, float nenner2)
+{
+    float Ezaehler2 = zaehler1 * nenner2;
+    float Enenner2 = nenner1 * zaehler2;
+    printf("(%f/%f)*(%f/%f)=(%f/%f)", zaehler1, nenner1, zaehler2, nenner2, Ezaehler2, Enenner2);
+}
+
+float Eingabezaehler1;
+float Eingabezaehler2;
+float Eingabenenner1;
+float Eingabenenner2;
+
+int main()
+{
+    printf("Geben sie zaehler und nenner ein: ");
+    scanf_s("%f %f", &Eingabezaehler1, &Eingabenenner1);
+    printf("Geben sie zaehler und nenner ein: ");
+    scanf_s("%f %f", &Eingabezaehler2, &Eingabenenner2);
+
+
+    multiplikation(Eingabezaehler1, Eingabenenner1, Eingabezaehler2, Eingabenenner2);
+    printf("\n");
+    //division(Eingabezaehler1, Eingabenenner1, Eingabezaehler2, Eingabenenner2);
+
+    return 0;
+}
